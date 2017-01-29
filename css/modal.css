@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* CSS Document */
+
+.fade-bkg{ position:fixed; z-index:999; left:0px; top:0px; bottom:0px; right:0px; background:#000; opacity:0.4; display:none;}
+	.modal{ width:85%; position:fixed; z-index:1000; right:70px; top:50%; display:none;}
+		.modal-cont{ background:#fff;}
+	.closemod{ background:url(../img/close.png) no-repeat; width:32px; height:33px; position:absolute; top:0px; right:-64px;}
+	.modal-cont .nobkg{ padding: 20px 0 0 38px;}
+	.nobkg{ background:none !important;}
+	.cent{ margin:0 auto; margin-left:100px;}
+.dde .bigfont{ color:#949499;}
+	.sul{ display:block;}
+		.sul li{ display:block; margin-top:10px; line-height:20px; font-size:15px; color:#29282e; padding-left:10px; font-family: 'GothamProMedium';}
+		.wirsfb{ width:300px !important;}
+ 

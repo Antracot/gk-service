@@ -1,0 +1,1309 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<!-- <meta name=»viewport» content=»width=640,user-scalable=false» /> -->
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<title>Проектирование инженерных систем</title>
+<link href="css/reset.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="css/style.css"  type="text/css" id="stylesheet" media="screen"/>
+<link rel="stylesheet" href="css/modal.css"  type="text/css"/>
+<script  type="text/javascript"  src="js/jquery-1.6.1.min.js"></script>
+<script  type="text/javascript"  src="js/script.js"></script>
+<script src="http://yastatic.net/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+  window.onload = function () {
+      jQuery(".cityname").text(ymaps.geolocation.city);
+     
+  }
+</script>
+<script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
+<script src="js/jquery.validate.min.js" type="text/javascript"></script>
+<script  type="text/javascript"  src="js/jquery.maskedinput.min.js"></script>
+<script src="js/custom.js" type="text/javascript"></script>
+<script src="js/modal.js" type="text/javascript"></script>
+<script src="js/topslider.js" type="text/javascript"></script>
+<script src="js/bigslider.js" type="text/javascript"></script>
+<script src="js/accord.js" type="text/javascript"></script>
+<script src="js/mail.js" type="text/javascript"></script>
+
+<style>
+	.cityname{ text-transform:uppercase;}
+	.error{ color: red;}
+	.form-input_error, .form-textarea_error {border:none; border-bottom:2px solid #e85656; color:#fff; font-size:12px; font-family: 'GothamProMedium'; width:190px; margin:0 auto; margin-top:10px; height:30px; line-height:30px; background:none; padding:0px; outline:none;}
+	.form-input_success, .form-textarea_success {border:none; border-bottom:2px solid #7dbf23; color:#fff; font-size:12px; font-family: 'GothamProMedium'; width:190px; margin:0 auto; margin-top:10px; height:30px; line-height:30px; background:none; padding:0px; outline:none; }
+	.hid{ display:none; }
+	.opnf{ background: none;}
+	.nnd{ text-align:center !important; display:inline-block !important; margin-top:2px; background:#8cc540; border-color:#8cc540; vertical-align:middle; float:right;}
+	.cl{ color:#29282e !important;}
+	.op{ color:#02298f;}
+</style>
+</head>
+
+<body>
+	<div class="all_page">
+    	<div class="header">
+        	<div class="cont">
+            	<div class="one_goriz wi170">
+                	<a href="#" class="logo"><span><img src="img/logo.png" width="30" height="43" /></span><span>ГК КАЧЕСТВЕННЫЙ СЕРВИС</span></a>
+        		</div> <!--one_goriz-->
+                <div class="one_goriz wi285">
+                	<p class="grey">ПРОЕКТИРУЕМ ИНЖЕНЕРНЫЕ СИСТЕМЫ "ПОД КЛЮЧ".</p>
+                    <p class="blue">ПРОЕКТЫ ВОДОСНАБЖЕНИЯ Г. <span class="cityname"></span></p>
+        		</div> <!--one_goriz-->
+                <div class="one_goriz wi200 hideon700">
+                	<span class="tab">                	
+                    	<p class="ts mf">gkservice@yandex.ru</p>
+                    </span> <!--tab-->
+        		</div> <!--one_goriz-->
+                <div class="one_goriz wi200">
+                	<span class="tab">                	
+                    	<a href="tel:+78123125473" class="ts mf1">+7 (812) 312 54 73</a>
+                    </span> <!--tab-->
+        		</div> <!--one_goriz-->
+                 <div class="one_goriz wi180">
+                	<span class="tab">                	
+                    	<a href="#" class="ts mf2 mod11" rel="#obrz">Заказать звонок</a>
+                    </span> <!--tab-->
+        		</div> <!--one_goriz-->
+            </div> <!--header_cont-->
+        </div> <!--header-->
+        <div class="firstscreen">
+        	<div class="cont">
+                <div class="lsfb">
+                    <span class="bigfont">Спроектируем систему <br/><b>водоснабжения</b> и оценим <br/>затраты на материалы за 1 день</span>
+                    <ul class="snowul hideon300">
+                    	<li>Проектируем систему отопления ( расчет теплопотерь дома, гидравлический расчет, расчет объема системы, подбор котла, подбор и расчет мощности приборов отопления и т.д.).</li>
+                        <li>Проектируем систему канализации и водоснабжения;</li>
+                        <li>Проектируем и рассчитываем систему вентиляции</li>
+                    </ul> <!--snowul--> 
+                </div> <!--lsfb-->
+                <div class="rsfb">
+                	<h3>Узнайте сколько будет <br/>стоить Ваш проект прямо <br/>сейчас</h3>
+                    <h5>и сколько составит Ваша <br/>реальная экономия </h5>
+<!--                     <form class="info">
+                    	<div class="message js-form-message"></div>
+                    	<input type="text" value="" name="tele" placeholder="Введите Ваш номер телефона" class="greeninput tel1"/>
+                    	<input type="text" value="" name="mail" placeholder="Введите Ваш e-mail адрес" class="greeninput mail1"/>
+                    	<input type="text" value="" name="komment" placeholder="Комментарии и пожелания" class="greeninput text1"/>
+                        <input type="submit" class="greena sndd" value="ОСТАВИТЬ ЗАЯВКУ" />
+                    </form> -->
+                    
+                    <!-- MAIN FORM -->
+                    <form>
+                        <input type="hidden" name="project_name" value="Проектирование инженерных систем">
+                        <input type="hidden" name="admin_email" value="">
+                        <input type="hidden" name="form_subject" value="Узнайте сколько будет стоить Ваш проект прямо сейчас (верх сайта)">
+
+                        <input type="text" name="Телефон" placeholder="Введите Ваш номер телефона" class="greeninput tel1" required><br>
+                        <input type="text" name="E-mail" placeholder="Введите Ваш e-mail адрес" class="greeninput mail1"><br>
+                        <input type="text" name="Коментарий" placeholder="Комментарии и пожелания" class="greeninput text1"><br>
+                        <input type="submit" class="submit" value="ОСТАВИТЬ ЗАЯВКУ">
+                    </form>
+
+
+
+                </div> <!--rsfb-->
+        		<div class="clear"></div>
+            </div> <!--firstscreen_cont-->
+        </div> <!--firstscreen-->
+
+        <div class="left_fix_btn">
+            <div class="tel" id="tel_right">
+                <a href=""><img src="img/tel_btn.jpg" alt=""></a>
+            </div>
+            <div class="que" id="que_right">
+                <a href=""><img src="img/que_btn.jpg" alt=""></a>
+            </div>
+        </div>
+
+        <div class="secondscreen">
+            <div class="cont">
+                <h1>Почему Вам стоит обратиться<br/>именно к ГК Качественный сервис?</h1>
+                <div class="oneofthree star">
+                	Выполним проект в соответствии ГОСТом, СНиПУ и обеспечим высокую энергоэффективность для монтажа за счет многолетнего опыта
+                </div> <!--oneofthree-->
+                <div class="oneofthree cash">
+                	Продадим нужное Вам оборудование в розницу и по оптовой цене
+                </div> <!--oneofthree-->
+                <div class="oneofthree worker">
+                	Быстрая проектировка и без потери качества за счет более 20 опытных специалистов
+                </div> <!--oneofthree-->
+                <div class="clear"></div>
+            </div> <!--cont-->
+        </div> <!--secondscreen-->
+        <div class="sirdscreen">
+        	<div class="cont">
+            	<h1>Предоставляемые услуги<br/>и стоимость</h1>
+                <h2>Одиночные решения</h2>
+                <div class="oneofthr">
+                	<div class="ocont">
+                    	<div class="onename">Отопление</div>
+                        <div class="cena">4 900 руб</div>
+                        <div class="srok">1 день</div>
+                        <div class="clear"></div>
+                        <a href="#" class="pdf">Посмотреть пример на основе нашей работы</a>
+                        <a href="#" class="zakaz_proj mod11" rel="#mo1">ЗАКАЗАТЬ ПАКЕТ</a>
+                        <ul class="hark">
+                        	<li>Теплотехнический расчет</li>
+                            <li>Общее сведения и указания</li>
+                            <li>План расположения и оборудования</li>
+                            <li>Схема систем отопления</li>
+                            <li>Схема теплого пола</li>                            
+                        </ul>
+                        <a href="#" class="pdf mod11" rel="#mo11">Узнать о всех преимуществах пакета</a>
+                    </div><!--ocont-->
+                </div> <!--oneofthree-->
+                <div class="oneofthr">
+                	<div class="ocont">
+                    	<div class="onename">Проектирования вентиляция</div>
+                        <div class="cena">7 450 руб</div>
+                        <div class="srok">1 день</div>
+                        <div class="clear"></div>
+                        <a href="#" class="pdf">Посмотреть пример на основе нашей работы</a>
+                        <a href="#" class="zakaz_proj mod11" rel="#mo2">ЗАКАЗАТЬ ПАКЕТ</a>
+                        <ul class="hark">
+                        	<li>Расчет воздухообмена в здании</li>
+                            <li>Общие сведения и указания</li>
+                            <li>План расположения и оборудования</li>
+                            <li>Схема систем отопления</li>
+                            <li>Схема теплого пола</li>                            
+                        </ul>
+                        <a href="#" class="pdf mod11" rel="#mo12">Узнать о всех преимуществах пакета</a>
+                    </div><!--ocont-->
+                </div> <!--oneofthree-->
+                <div class="oneofthr normarg">
+                	<div class="ocont">
+                    	<div class="onename">Водоснабжение и водоотведение</div>
+                        <div class="cena">4 900 руб</div>
+                        <div class="srok">6 часов</div>
+                        <div class="clear"></div>
+                        <a href="#" class="pdf">Посмотреть пример на основе нашей работы</a>
+                        <a href="#" class="zakaz_proj mod11" rel="#mo3">ЗАКАЗАТЬ ПАКЕТ</a>
+                        <ul class="hark">
+                        	<li>Определение расчетных расходов воды в системах водоснабжения и водоотведения, теплоты на нужды горячего водоснабжения</li>
+                            <li>Общее сведения и указания</li>
+                            <li>Схема систем водоснабжения и водоотведения</li>                           
+                        </ul>
+                        <a href="#" class="pdf mod11" rel="#mo13">Узнать о всех преимуществах пакета</a>
+                    </div><!--ocont-->
+                </div> <!--oneofthree-->
+                <div class="clear"></div>
+                <h2>Комбинированные пакеты</h2>
+                <div class="oneoftwo">
+                	<img src="img/build1.jpg" class="inimg" width="199"  alt=""/>
+                    <div class="r_s_ont">
+                    	<h4>Отопление + водоснабжение и водоотведение</h4>
+                        <div class="lsrs">
+                        	<div class="cena">9 780 руб</div>
+                        	<div class="srok">1-2 дня</div>
+                        	<div class="clear"></div>
+                        </div> <!--lsrs-->
+                        <div class="rsrs">
+                        	<a href="#" class="zakaz_proj mod11" rel="#mo4">ЗАКАЗАТЬ</a>
+                        	<a href="#" class="pdf mod11" rel="#mo14">Узнать подробнее</a>
+                        </div> <!--rsrs-->
+                        <div class="clear"></div>
+                    </div> <!--r_s_ont-->
+                    <div class="clear"></div>
+                </div> <!--oneoftwo-->
+                <div class="oneoftwo normarg">
+                	<img src="img/build2.jpg" class="inimg" width="199"  alt=""/>
+                    <div class="r_s_ont">
+                    	<h4>Отопление + вентиляция + водоснабжение + водоотведение</h4>
+                        <div class="lsrs">
+                        	<div class="cena">14 980 руб</div>
+                        	<div class="srok">1 день</div>
+                        	<div class="clear"></div>
+                        </div> <!--lsrs-->
+                        <div class="rsrs">
+                        	<a href="#" class="zakaz_proj mod11" rel="#mo5">ЗАКАЗАТЬ</a>
+                        	<a href="#" class="pdf mod11" rel="#mo15">Узнать подробнее</a>
+                        </div> <!--rsrs-->
+                        <div class="clear"></div>
+                    </div> <!--r_s_ont-->
+                    <div class="clear"></div>
+                </div> <!--oneoftwo-->
+                <div class="clear"></div>
+                <div class="bigone">
+                	<img src="img/xreni.png" class="inimg newwi" width="314" height="160" alt=""/>
+                    <div class="r_s_ont">
+                    	
+                        <div class="lsrs">
+                        	<div class="onename">Индивидуальное проектирование любой сложности</div>
+                        	<h4 id="ind">Стоимость и сроки - индивидуальны</h4>
+                        </div> <!--lsrs-->
+                        <div class="rsrs">
+                        <br><br>
+                        	<a href="#" class="zakaz_proj mod11" rel="#mo6">ЗАКАЗАТЬ РАСЧЕТ</a>
+                        	<!-- <a href="#" class="pdf mod11" rel="#mo6">Узнать подробнее</a> -->
+                        </div> <!--rsrs-->
+                        <div class="clear"></div>
+                    </div> <!--r_s_ont-->
+                    <div class="clear"></div>
+                </div> <!--bigone-->
+                <div class="bigone">
+                	<img src="img/xreni1.png" class="inimg newwi" width="314" height="160" alt=""/>
+                    <div class="r_s_ont">
+                    	
+                        <div class="lsrs">
+                        	<div class="onename">Тепловой расчет<br/><a href="#" class="pdf">Посмотреть пример на основе нашей работы</a></div>
+                            <div class="cena">577 руб</div>
+                        	<div class="srok">1-2 часа</div>                        
+                        	<div class="clear"></div>                  	
+                        </div> <!--lsrs-->
+                        <div class="rsrs">
+							<a href="#" class="zakaz_proj mod11" rel="#mo7">ЗАКАЗАТЬ РАСЧЕТ</a>
+                        	<a href="#" class="pdf mod11" rel="#mo17">Узнать подробнее</a>
+                        </div> <!--rsrs-->
+                        <div class="clear"></div>      
+                    </div> <!--r_s_ont-->
+                    <div class="clear"></div>
+                </div> <!--bigone-->
+                <div class="bigone">
+                	<img src="img/xreni2.jpg" class="inimg1 newwi" width="380" height="258" alt=""/>
+                    <div class="r_s_ont">
+                    	
+                        <div class="lsrs">
+                        	<div class="onename">Пакет энергоэффективности</div>
+                            <div class="cena">Бесплатно</div>
+                        	<div class="srok"></div>                        
+                        	<div class="clear"></div>
+                            <a href="#" class="pdf">Посмотреть пример на основе нашей работы</a> 
+                            <a href="#" class="pdf mod11" rel="#mo18">Узнать о преимуществах пакета</a> 	
+                        </div> <!--lsrs-->
+                        <div class="rsrs">
+                        	<ul class="hark">
+                        		<li>Рекомендации по утеплению</li>
+	                            <li>Низкотемпературные системы отопления</li>
+    	                        <li>Управления и контроль за системами дома</li>
+        	                    <li>Внедрение новых систем</li>                            
+                	        </ul>
+                        	<a href="#" class="zakaz_proj mod11" rel="#mo8" style="width: 100%;">ВОСПОЛЬЗОВАТЬСЯ ПРЕДЛОЖЕНИЕМ</a>                        	
+                        </div> <!--rsrs-->
+                        <div class="clear"></div>      
+                    </div> <!--r_s_ont-->
+                    <div class="clear"></div>
+                </div> <!--bigone-->
+            </div> <!--cont-->
+        </div> <!--sirdscreen-->
+        <div class="fourscreen">
+        	<div class="cont bkg1_and_new_har">
+            	<div class="bigcont">
+                <!-- BIGGEST FORM BLUE BG -->
+                <form>
+                    <input type="hidden" name="project_name" value="Проектирование инженерных систем">
+                    <input type="hidden" name="admin_email" value="">
+                    <input type="hidden" name="form_subject" value="Составьте индивидуальный проект">
+
+                	<div class="onesrc">
+                    	<div class="punct_name">
+                        	Составьте индивидуальный <br/>проект
+                        </div> <!--punct_name-->
+                        <div class="textblk">
+                        	01. У вас есть уже проект дома, планировка дома, либо схема/фото
+                            <a href="#" class="deco_a pok">ДА, У МЕНЯ НУЖНАЯ ИНФОРМАЦИЯ</a> 
+                            <span class="hid">
+                                <!-- <input type="file" class="opnf" value="загрузить"></span> -->
+                                <input type="file" multiple="multiple" accept=".txt,image/*">
+                                <a href="#" class="submit button nnd_file">Загрузить файлы</a>
+                                <!-- <div class="ajax-respond"></div>       -->
+                            </span>
+                            <a href="#" class="deco_a next">ТАКОЙ ИНФОРМАЦИИ У МЕНЯ НЕТ</a>
+                        </div> <!--textblk-->
+                    </div> <!--onesrc-->
+                    <div class="onesrc">
+                    	<div class="punct_name">
+                        	Составьте индивидуальный <br/>проект
+                        </div> <!--punct_name-->
+                        <div class="textblk">
+                        	02. Материалы стен (из чего сделан пирог стены, толщина):
+                            <textarea name="Материалы&nbspстен" placeholder="Введите необходимые параметры..." class="greeninput1"></textarea>
+                            <a href="#" class="deco_a next">Перейти к следующему вопросу</a>
+                        </div> <!--textblk-->
+                    </div> <!--onesrc-->
+                    <div class="onesrc">
+                    	<div class="punct_name">
+                        	Составьте индивидуальный <br/>проект
+                        </div> <!--punct_name-->
+                        <div class="textblk">
+                        	03. Какие окна (профиль/стеклопакет, размеры):
+                            <textarea name="Какие&nbspокна" placeholder="Введите необходимые параметры..." class="greeninput1"></textarea>
+                            <a href="#" class="deco_a next">Перейти к следующему вопросу</a>
+                        </div> <!--textblk-->
+                    </div> <!--onesrc-->
+                    <div class="onesrc">
+                    	<div class="punct_name">
+                        	Составьте индивидуальный <br/>проект
+                        </div> <!--punct_name-->
+                        <div class="textblk marg-20">
+                        	04. Какие двери (утепленные/не утепленные), размеры <br/>входных дверей (железные или металлические):
+                            <textarea name="Какие&nbspдвери" placeholder="Введите необходимые параметры..." class="greeninput1"></textarea>
+                            <a href="#" class="deco_a next">Перейти к следующему вопросу</a>
+                        </div> <!--textblk-->
+                    </div> <!--onesrc-->
+                    <div class="onesrc">
+                    	<div class="punct_name">
+                        	Составьте индивидуальный <br/>проект
+                        </div> <!--punct_name-->
+                        <div class="textblk marg-20">
+                        	05. Утепление кровли (каким материалом утеплено <br/>и сколько см)
+                            <textarea name="Утепление&nbspкровли" placeholder="Введите необходимые параметры..." class="greeninput1"></textarea>
+                            <a href="#" class="deco_a next">Перейти к следующему вопросу</a>
+                        </div> <!--textblk-->
+                    </div> <!--onesrc-->
+                    <div class="onesrc">
+                    	<div class="punct_name">
+                        	Составьте индивидуальный <br/>проект
+                        </div> <!--punct_name-->
+                        <div class="textblk marg-20">
+                        	06. Утепление пола (каким материалом утеплено <br/>и сколько см)
+                            <textarea name="Утепление&nbspпола" placeholder="Введите необходимые параметры..." class="greeninput1"></textarea>
+                            <a href="#" class="deco_a next">Перейти к следующему вопросу</a>
+                        </div> <!--textblk-->
+                    </div> <!--onesrc-->
+                    <div class="onesrc">
+                    	<div class="punct_name">
+                        	Составьте индивидуальный <br/>проект
+                        </div> <!--punct_name-->
+                        <div class="textblk">
+                        	07. Высота потолков:
+                            <textarea name="Высота&nbspпотолков" placeholder="Введите необходимые параметры..." class="greeninput1"></textarea>
+                            <a href="#" class="deco_a next">Перейти к следующему вопросу</a>
+                        </div> <!--textblk-->
+                    </div> <!--onesrc-->
+                    <div class="onesrc lus bbkg nobkg">
+                    	<div class="punct_name">
+                        	Составьте индивидуальный <br/>проект
+                        </div> <!--punct_name-->
+                        <div class="textblk fulwi">
+                        <form class="info" action="" method="post">
+                    		<div class="message js-form-message"></div>
+
+                            <!-- <div class="ajax-respond" style="background: red; width: 250px; height: 50px"></div>       -->
+
+                            <input type="text" name="Сcилка&nbspна&nbspфайл" class="hidden greeninput qwe name1" id="path_to_file" value="">
+                            <input type="text" name="Имя" placeholder="Введите Ваше имя" class="greeninput qwe name1"/>
+                            <input type="text" name="Телефон" placeholder="Введите Ваш номер телефона" class="greeninput qwe" required/>
+                    		<input type="email" name="E-mail" placeholder="Введите Ваш e-mail адрес" class="greeninput qwe" required/>
+                    		<!-- <a href="#" class="greena nnd">ОСТАВИТЬ ЗАЯВКУ</a> -->
+                    	   <input type="submit" class="submit greena nnd" value="ОСТАВИТЬ ЗАЯВКУ">
+                        </form>
+                        </div> <!--textblk-->
+                    </div> <!--onesrc-->
+                    <div class="clear"></div>
+                </form>   
+                </div> <!--bigcont-->
+            </div> <!--cont-->
+        </div> <!--fourscreen-->
+        <div class="fivescreen">
+        	<div class="cont">
+            	<h1>Уже выполненные проекты <br/>и отзывы клиентов</h1>
+                <div class="slider">
+                	<div class="slide" id="sl1">
+                    	<div class="ls_slide">
+                        	<img src="img/slfoto.jpg" width="400" height="300" alt="" class="bigfoto" />
+                            <ul>
+                            	<li><a href="#"><img class="smallfoto" src="img/slfoto1.jpg" width="83" height="55" alt="" /></a>
+                                <li><a href="#"><img class="smallfoto" src="img/slfoto2.jpg" width="83" height="55" alt="" /></a>
+                                <li><a href="#"><img class="smallfoto" src="img/slfoto3.jpg" width="83" height="55" alt="" /></a>
+                                <li><a href="#"><img class="smallfoto" src="img/slfoto4.jpg" width="83" height="55" alt="" /></a>
+                                <li><a href="#" class="act_foto"><img class="smallfoto" src="img/slfoto.jpg" width="83" height="55" alt="" /></a>
+                            </ul>
+                        </div> <!--ls_slide-->
+                        <div class="rs_slide">
+                        	<span><b>1Проектирование и монтаж инженерных систем и коммуникаций</b></span>
+                            <p>Показана аксонометрическая схема системы отопления Лабораторного блока в составе Административно-лабораторно-бытового корпуса. Часть отапливаемых помещений относилась к категории «чистых» помещений и при проектировании системы отопления это необходимо было учитывать. Показана аксонометрическая схема системы отопления</p>
+                            <p>Показана аксонометрическая схема системы отопления Лабораторного блока в составе Административно-лабораторно-бытового корпуса. Часть отапливаемых помещений ...</p>
+                            <span>Стоимость проекта: <b>22 000 рублей</b></span>
+                            <span>Срок реализации: <b>5 дней</b></span>
+                            <span><a href="#">Скачать проект</a></span>
+                            <ul class="ringring">
+                            	<li><a href="#" rel="#sl1" class="active"></a></li>
+                                <li><a href="#" rel="#sl2"></a></li>
+                                <li><a href="#" rel="#sl3"></a></li>
+                            </ul> <!--ringring-->
+                        </div> <!--rs_slide-->
+                        <div class="clear"></div>
+                    
+                <div class="otziv">
+                	<i>"Отличная компания, лично знаю ребят, полностью доверил им отопление вв своем доме. В короткий срок был разработан проект, составлена смета. Были учтены все предпочтения и пожелания. Рассказали о плюсах и минусах материалов, подробно всё описали и подобрали оптимальный вариант в соотношении цена-качество. "</i>
+                    <div class="whois">
+                    	<img src="img/fototelo2.png" width="79" height="80" alt="" />
+                        <b>Владимир Банирнцев</b></br>
+                        Специалист по работе с клиентом в компании "Телефония России"
+                    	<div class="clear"></div>
+                    </div>
+                </div> <!--otziv-->
+                </div> <!--slide-->
+
+                	<div class="slide hidden" id="sl2">
+                    	<div class="ls_slide">
+                        	<img src="img/slfoto22.jpg" width="400" height="300" alt="" class="bigfoto" />
+                            <ul>
+                            	<li><a href="#"><img class="smallfoto" src="img/slfoto1.jpg" width="83" height="55" alt="" /></a>
+                                <li><a href="#"><img class="smallfoto" src="img/slfoto2.jpg" width="83" height="55" alt="" /></a>
+                                <li><a href="#"><img class="smallfoto" src="img/slfoto3.jpg" width="83" height="55" alt="" /></a>
+                                <li><a href="#"><img class="smallfoto" src="img/slfoto4.jpg" width="83" height="55" alt="" /></a>
+                                <li><a href="#" class="act_foto"><img class="smallfoto" src="img/slfoto.jpg" width="83" height="55" alt="" /></a>
+                            </ul>
+                        </div> <!--ls_slide-->
+                        <div class="rs_slide">
+                        	<span><b>2Проектирование и монтаж инженерных систем и коммуникаций</b></span>
+                            <p>Показана аксонометрическая схема системы отопления Лабораторного блока в составе Административно-лабораторно-бытового корпуса. Часть отапливаемых помещений относилась к категории «чистых» помещений и при проектировании системы отопления это необходимо было учитывать. Показана аксонометрическая схема системы отопления</p>
+                            <p>Показана аксонометрическая схема системы отопления Лабораторного блока в составе Административно-лабораторно-бытового корпуса. Часть отапливаемых помещений ...</p>
+                            <span>Стоимость проекта: <b>22 000 рублей</b></span>
+                            <span>Срок реализации: <b>5 дней</b></span>
+                            <span><a href="#">Скачать проект</a></span>
+                            <ul class="ringring">
+                            	<li><a href="#" rel="#sl1" class="active"></a></li>
+                                <li><a href="#" rel="#sl2"></a></li>
+                                <li><a href="#" rel="#sl3"></a></li>
+                            </ul> <!--ringring-->
+                        </div> <!--rs_slide-->
+                        <div class="clear"></div>
+                    
+                <div class="otziv">
+                	<i>"Отличная компания, лично знаю ребят, полностью доверил им отопление вв своем доме. В короткий срок был разработан проект, составлена смета. Были учтены все предпочтения и пожелания. Рассказали о плюсах и минусах материалов, подробно всё описали и подобрали оптимальный вариант в соотношении цена-качество. "</i>
+                    <div class="whois">
+                    	<img src="img/fototelo.png" width="79" height="80" alt="" />
+                        <b>Владимир Банирнцев</b></br>
+                        Специалист по работе с клиентом в компании "Телефония России"
+                    	<div class="clear"></div>
+                    </div>
+                </div> <!--otziv-->
+                </div> <!--slide-->
+
+                	<div class="slide hidden" id="sl3">
+                    	<div class="ls_slide">
+                        	<img src="img/slfoto.jpg" width="400" height="300" alt="" class="bigfoto" />
+                            <ul>
+                            	<li><a href="#"><img class="smallfoto" src="img/slfoto1.jpg" width="83" height="55" alt="" /></a>
+                                <li><a href="#"><img class="smallfoto" src="img/slfoto2.jpg" width="83" height="55" alt="" /></a>
+                                <li><a href="#"><img class="smallfoto" src="img/slfoto3.jpg" width="83" height="55" alt="" /></a>
+                                <li><a href="#"><img class="smallfoto" src="img/slfoto4.jpg" width="83" height="55" alt="" /></a>
+                                <li><a href="#" class="act_foto"><img class="smallfoto" src="img/slfoto.jpg" width="83" height="55" alt="" /></a>
+                            </ul>
+                        </div> <!--ls_slide-->
+                        <div class="rs_slide">
+                        	<span><b>3Проектирование и монтаж инженерных систем и коммуникаций</b></span>
+                            <p>Показана аксонометрическая схема системы отопления Лабораторного блока в составе Административно-лабораторно-бытового корпуса. Часть отапливаемых помещений относилась к категории «чистых» помещений и при проектировании системы отопления это необходимо было учитывать. Показана аксонометрическая схема системы отопления</p>
+                            <p>Показана аксонометрическая схема системы отопления Лабораторного блока в составе Административно-лабораторно-бытового корпуса. Часть отапливаемых помещений ...</p>
+                            <span>Стоимость проекта: <b>22 000 рублей</b></span>
+                            <span>Срок реализации: <b>5 дней</b></span>
+                            <span><a href="#">Скачать проект</a></span>
+                            <ul class="ringring">
+                            	<li><a href="#" rel="#sl1" class="active"></a></li>
+                                <li><a href="#" rel="#sl2"></a></li>
+                                <li><a href="#" rel="#sl3"></a></li>
+                            </ul> <!--ringring-->
+                        </div> <!--rs_slide-->
+                        <div class="clear"></div>
+                    
+                <div class="otziv">
+                	<i>"Отличная компания, лично знаю ребят, полностью доверил им отопление вв своем доме. В короткий срок был разработан проект, составлена смета. Были учтены все предпочтения и пожелания. Рассказали о плюсах и минусах материалов, подробно всё описали и подобрали оптимальный вариант в соотношении цена-качество. "</i>
+                    <div class="whois">
+                    	<img src="img/fototelo2.png" width="79" height="80" alt="" />
+                        <b>Владимир Банирнцев</b></br>
+                        Специалист по работе с клиентом в компании "Телефония России"
+                    	<div class="clear"></div>
+                    </div>
+                </div> <!--otziv-->
+                </div> <!--slide-->
+
+                </div> <!--slider-->
+            </div> <!--cont-->
+        </div> <!--fivescreen-->
+        <div class="sixscreen">
+        	<div class="cont">
+            	<h1>Наши партнеры</h1>
+                <div class="oneofthree megafon">
+                	<b>Мегафон</b><br/><br/>
+                   Выполним проект в соответствии ГОСТу и обеспечим высокую энергоэффективность для монтажа за счет многолетнего опыта             
+                </div> <!--oneofthree-->
+                <div class="oneofthree aeroflot">
+                	<b>Аэрофлот</b><br/><br/>
+                    Продадим нужное Вам оборудование в розницу и по оптовой цене
+                </div> <!--oneofthree-->
+                <div class="oneofthree uralsib">
+                	<b>Уралсиб</b><br/><br/>
+                	Быстрая проектировка и без потери качества за счет более 20 опытных специалистов
+                </div> <!--oneofthree-->
+                <div class="clear"></div>
+            </div> <!--cont-->
+        </div> <!--sixscreen-->
+        <div class="fivescreen">
+        	<div class="cont">
+            	<h1>Как мы работаем</h1>
+                <div class="oneofthree pioner relat">
+                	<b>КОНСУЛЬТАЦИЯ С ИНЖЕНЕРОМ</b><br/><br/>
+                   Наш инженер проанализирует поставленные задачи, ответит на ваши вопросы и сориентирует по стоимости услуг.
+                   <div class="rarr"><span>1</span></div>       
+                </div> <!--oneofthree-->
+                <div class="oneofthree house relat">
+                	<b>ДЕМОНСТРАЦИЯ НА ОБЪЕКТЕ</b><br/><br/>
+                    Прямо на вашем объекте мы установим оборудование и продемонстрируем, как будет работать система видеонаблюдения.
+                    <div class="rarr"><span>2</span></div>    
+                </div> <!--oneofthree-->
+                <div class="oneofthree engener relat">
+                	<b>ИНЖЕНЕРНЫЙ ПРОЕКТ</b><br/><br/>
+                	Проект, созданный на базе плана вашего помещения, гарантирует идентификацию объектов и экономит ваши средства.
+                    <div class="rarr"><span>3</span></div>    
+                </div> <!--oneofthree-->
+                <div class="clear"></div>
+                <div class="oneofthree pen relat">
+                	<b>ВНЕСЕНИЕ КОРРЕКТИВ И ИЗМЕНЕНИЙ</b><br/><br/>
+                   Если по необходимости нужны будут коррективы, то мы их внесем. 
+                   <div class="rarr"><span>4</span></div>          
+                </div> <!--oneofthree-->
+                <div class="oneofthree folder relat">
+                	<b>СМЕТА И ЗАКЛЮЧЕНИЕ ДОГОВОРА</b><br/><br/>
+                    Мы готовим смету в трёх вариантах и заключаем договор.
+                    <div class="rarr"><span>5</span></div>    
+                </div> <!--oneofthree-->
+                <div class="oneofthree cash relat">
+                	<b>ОПЛАТА НАШЕЙ РАБОТЫ</b><br/><br/>
+                	После заключение договора и предоставления Вам сметы, Вы оплачиваете проект.
+                    <div class="rarr"><span>6</span></div>    
+                </div> <!--oneofthree-->
+                <div class="clear"></div>
+            </div> <!--cont-->
+        </div> <!--fivescreen-->
+        <div class="sixscreen">
+        	<div class="cont">
+            	<h1>Часто задаваемые вопросы</h1>
+                <div class="onequest">
+                	<a href="#" class="op" rel="otv1">Что включает в себя теплотехнический расчет?</a>
+                    <div class="otv openotv" id="otv1">
+                    	Включает в себя общие данные, в которых представлены основные итоги расчета здания – отапливаемая площадь и объем здания, проектные потери тепла за счет теплопередачи и на вентиляцию, проектная тепловая нагрузка здания, климатические данные, показатели и коэффициенты потерь тепла; данные по помещениям – расчетная температура в помещении, площадь, объем, тип помещения, проектные нагрузки на отопление и вентиляцию в каждом помещении; подробные данные по помещениям, где кроме сведений, приведенных в данных по помещениям, даются сведения по каждой ограждающей конструкции – размеры, коэффициент сопротивления теплопередаче, потери тепла через данную конструкцию
+                    </div> <!--otv-->
+                </div><!--onequest-->
+                <div class="onequest">
+                	<a href="#" class="cl" rel="otv2">Что это значит выполнить и согласовать схему прокладки отопления?</a>
+                    <div class="otv" id="otv2">
+                    	Включает в себя общие данные, в которых представлены основные итоги расчета здания – отапливаемая площадь и объем здания, проектные потери тепла за счет теплопередачи и на вентиляцию, проектная тепловая нагрузка здания, климатические данные, показатели и коэффициенты потерь тепла; данные по помещениям – расчетная температура в помещении, площадь, объем, тип помещения, проектные нагрузки на отопление и вентиляцию в каждом помещении; подробные данные по помещениям, где кроме сведений, приведенных в данных по помещениям, даются сведения по каждой ограждающей конструкции – размеры, коэффициент сопротивления теплопередаче, потери тепла через данную конструкцию
+                    </div> <!--otv-->
+                </div><!--onequest-->
+                <div class="onequest">
+                	<a href="#" class="cl" rel="otv3">В каких случаях не нужно согласование для подключения к частным инженерным коммуникациям?</a>
+                    <div class="otv" id="otv3">
+                    	Включает в себя общие данные, в которых представлены основные итоги расчета здания – отапливаемая площадь и объем здания, проектные потери тепла за счет теплопередачи и на вентиляцию, проектная тепловая нагрузка здания, климатические данные, показатели и коэффициенты потерь тепла; данные по помещениям – расчетная температура в помещении, площадь, объем, тип помещения, проектные нагрузки на отопление и вентиляцию в каждом помещении; подробные данные по помещениям, где кроме сведений, приведенных в данных по помещениям, даются сведения по каждой ограждающей конструкции – размеры, коэффициент сопротивления теплопередаче, потери тепла через данную конструкцию
+                    </div> <!--otv-->
+                </div><!--onequest-->
+                <div class="onequest">
+                	<a href="#" class="cl" rel="otv4">Что нужно иметь для заказа проекта отопления, водоснабжения и канализации частного дома?</a>
+                    <div class="otv" id="otv4">
+                    	Включает в себя общие данные, в которых представлены основные итоги расчета здания – отапливаемая площадь и объем здания, проектные потери тепла за счет теплопередачи и на вентиляцию, проектная тепловая нагрузка здания, климатические данные, показатели и коэффициенты потерь тепла; данные по помещениям – расчетная температура в помещении, площадь, объем, тип помещения, проектные нагрузки на отопление и вентиляцию в каждом помещении; подробные данные по помещениям, где кроме сведений, приведенных в данных по помещениям, даются сведения по каждой ограждающей конструкции – размеры, коэффициент сопротивления теплопередаче, потери тепла через данную конструкцию
+                    </div> <!--otv-->
+                </div><!--onequest-->
+                <div class="onequest">
+                	<a href="#" class="cl" rel="otv5">Что содержит проект отопления, водоснабжения и канализации?</a>
+                    <div class="otv" id="otv5">
+                    	Включает в себя общие данные, в которых представлены основные итоги расчета здания – отапливаемая площадь и объем здания, проектные потери тепла за счет теплопередачи и на вентиляцию, проектная тепловая нагрузка здания, климатические данные, показатели и коэффициенты потерь тепла; данные по помещениям – расчетная температура в помещении, площадь, объем, тип помещения, проектные нагрузки на отопление и вентиляцию в каждом помещении; подробные данные по помещениям, где кроме сведений, приведенных в данных по помещениям, даются сведения по каждой ограждающей конструкции – размеры, коэффициент сопротивления теплопередаче, потери тепла через данную конструкцию
+                    </div> <!--otv-->
+                </div><!--onequest-->
+                <div class="onequest">
+                	<a href="#" class="cl" rel="otv6">Можно ли выполнить монтаж отопления, водоснабжения и канализации в доме без проекта?</a>
+                    <div class="otv" id="otv6">
+                    	Включает в себя общие данные, в которых представлены основные итоги расчета здания – отапливаемая площадь и объем здания, проектные потери тепла за счет теплопередачи и на вентиляцию, проектная тепловая нагрузка здания, климатические данные, показатели и коэффициенты потерь тепла; данные по помещениям – расчетная температура в помещении, площадь, объем, тип помещения, проектные нагрузки на отопление и вентиляцию в каждом помещении; подробные данные по помещениям, где кроме сведений, приведенных в данных по помещениям, даются сведения по каждой ограждающей конструкции – размеры, коэффициент сопротивления теплопередаче, потери тепла через данную конструкцию
+                    </div> <!--otv-->
+                </div><!--onequest-->
+                <div class="onequest">
+                	<a href="#" class="cl" rel="otv7">Почему такая цена на проект?</a>
+                    <div class="otv" id="otv7">
+                    	Включает в себя общие данные, в которых представлены основные итоги расчета здания – отапливаемая площадь и объем здания, проектные потери тепла за счет теплопередачи и на вентиляцию, проектная тепловая нагрузка здания, климатические данные, показатели и коэффициенты потерь тепла; данные по помещениям – расчетная температура в помещении, площадь, объем, тип помещения, проектные нагрузки на отопление и вентиляцию в каждом помещении; подробные данные по помещениям, где кроме сведений, приведенных в данных по помещениям, даются сведения по каждой ограждающей конструкции – размеры, коэффициент сопротивления теплопередаче, потери тепла через данную конструкцию
+                    </div> <!--otv-->
+                </div><!--onequest-->
+                <div class="onequest">
+                	<a href="#" class="cl" rel="otv8">Могу ли я найти материалы в соответствии с вашим проектом и расчетами?</a>
+                    <div class="otv" id="otv8">
+                    	Включает в себя общие данные, в которых представлены основные итоги расчета здания – отапливаемая площадь и объем здания, проектные потери тепла за счет теплопередачи и на вентиляцию, проектная тепловая нагрузка здания, климатические данные, показатели и коэффициенты потерь тепла; данные по помещениям – расчетная температура в помещении, площадь, объем, тип помещения, проектные нагрузки на отопление и вентиляцию в каждом помещении; подробные данные по помещениям, где кроме сведений, приведенных в данных по помещениям, даются сведения по каждой ограждающей конструкции – размеры, коэффициент сопротивления теплопередаче, потери тепла через данную конструкцию
+                    </div> <!--otv-->
+                </div><!--onequest-->
+            </div> <!--cont-->
+        </div> <!--sixscreen-->
+        
+        <div class="mapscreen">
+            <div class="cont">
+                <div class="rsfb">
+                    <h3>Узнайте сколько будет <br/>стоить Ваш проект прямо <br/>сейчас</h3>
+                    <h5>и сколько составит Ваша <br/>реальная экономия </h5>
+                    
+                <!-- BOTTOM FORM -->    
+                <form>
+                    
+                    <input type="hidden" name="project_name" value="Проектирование инженерных систем">
+                    <input type="hidden" name="admin_email" value="">
+                    <input type="hidden" name="form_subject" value="Узнайте сколько будет стоить Ваш проект прямо сейчас (низ сайта)">
+
+                    <input type="text" name="Телефон" placeholder="Введите Ваш номер телефона" class="greeninput" required />
+                    <input type="text" name="E-mail" placeholder="Введите Ваш e-mail адрес" class="greeninput"/>
+                    <input type="text" name="Коментарий" placeholder="Комментарии и пожелания" class="greeninput"/>
+                    <!-- <a href="#" class="greena">ОСТАВИТЬ ЗАЯВКУ</a> -->
+                    <input type="submit" class="submit" value="ОСТАВИТЬ ЗАЯВКУ">
+                </form>    
+                </div> <!--rsfb-->
+                <div class="rsfb whitebkg hideon300">
+                	<h6>Напишите нам</h6>
+                    <span class="comment">Напишите или позвоните нам в офис и менеджер проконсультирует Вас по необходимым вопросам.</span>
+                    <span class="ttel"><a href="tel:+78123125473" class="ts mf1">+7 (812) 312 54 73</a></span>
+                    <p class="ema1">gkservice@yandex.ru</p>
+                    <p class="addr1">г. Москва ул. Пушкина<br/>д. Кукушкина</p>
+                </div> <!--rsfb-->
+        		<div class="clear"></div>
+            </div> <!--cont-->
+        </div> <!--mapscreen-->
+        <div class="footer">
+        	<div class="cont">
+            	<div class="one_goriz wi170 ff100">
+                	<a href="#" class="logo"><span><img src="img/logo.png" width="30" height="43" /></span><span>ГК КАЧЕСТВЕННЫЙ СЕРВИС</span></a>
+        		</div> <!--one_goriz-->
+                <div class="one_goriz wi285 ff100">
+                	<p class="grey">ПРОЕКТИРУЕМ ИНЖЕНЕРНЫЕ СИСТЕМЫ "ПОД КЛЮЧ". ПРОЕКТЫ ВОДОСНАБЖЕНИЯ В Г. <span class="cityname">МОСКВЕM</span></p>        
+        		</div> <!--one_goriz-->
+                <div class="one_goriz wi200 ff100">
+                	<span class="tab">                	
+                    	<p class="ts mf">gkservice@yandex.ru</p>
+                    </span> <!--tab-->
+        		</div> <!--one_goriz-->
+                <div class="one_goriz wi200 hideon300">
+                	<span class="tab">                	
+                    	<a href="tel:+78123125473" class="ts mf1 nf11">+7 (812) 312 54 73</a>
+                    </span> <!--tab-->
+        		</div> <!--one_goriz-->
+            </div> <!--cont-->     
+        </div> <!--footer-->
+    </div> <!--all_page-->
+
+<div class="fade-bkg"></div>
+
+<!-- PAGE3 Одиночные решения - Отопление-->
+<div class="modal wirsfb" id="mo1">
+	<div class="modal-cont nobkg">
+    	<div class="rsfb">
+                	<h3>Заказать звонок</h3>
+                    <h5>Введите Ваш номер и менеджер<br/>свяжется с Вами в течении 10 минут <br/>и ответит на все вопросы. </h5><br/><br/>
+                    <form>
+                
+                        <input type="hidden" name="project_name" value="Проектирование инженерных систем">
+                        <input type="hidden" name="admin_email" value="">
+                        <input type="hidden" name="form_subject" value="Одиночные решения - Отопление">
+
+                    	<div class="message js-form-message"></div>
+                    	<input type="text" name="Телефон" placeholder="Введите Ваш номер телефона" class="greeninput" required /><br/>
+                        <!-- <a href="#" class="greena">ОСТАВИТЬ ЗАЯВКУ</a><br/> -->
+                        <input type="submit" class="submit" value="ОСТАВИТЬ ЗАЯВКУ">
+                        <br/>
+                    </form>
+                    <h5>либо позвоните по телефону</h5>
+                    <div class="one_goriz wi200">
+                		<span class="tab">                	
+                    		<a href="tel:+78123125473" class="ts mf1">+7 (812) 312 54 73</a>
+                	    </span> <!--tab-->
+        			</div> <!--one_goriz-->
+                </div> <!--rsfb-->
+        		<div class="clear"></div>
+    </div> <!--modal-cont-->
+<a href="#" class="closemod"></a>
+</div> <!--modal-->
+
+<!-- PAGE3 Одиночные решения - Отопление (СКРИТАЯ)-->
+<div class="modal" id="mo11">
+	<div class="modal-cont">
+    			<div class="lsfb nobkg dde">
+                    <span class="bigfont">Отопление</span>
+                    <ul class="sul hideon300">
+                    	<li>1) Рекомендации по утеплению;</li>
+                        <li>2) Низкотемпературные системы отопления;</li>
+                        <li>3) Управление и контроль за системами дома;</li>
+                        <li>4) Внедрение новых систем, только в согласованном режиме с существующими системами. Необходима проектная проработка каждой системы;</li>
+                        <li>5) Оборудование необходимое для работы инженерных систем, подбирается на основе- расчета системы и режимов работы конкретно для каждого дома, для обеспечения Высокой степени Комфорта и Безопасности.</li>                       
+                    </ul> <!--snowul--> 
+                </div> <!--lsfb-->
+                <div class="rsfb">
+                	<h3>Заказать звонок</h3>
+                    <h5>Введите Ваш номер и менеджер<br/>свяжется с Вами в течении 10 минут <br/>и ответит на все вопросы. </h5><br/><br/>
+                    <form>
+                        
+                         <input type="hidden" name="project_name" value="Проектирование инженерных систем">
+                        <input type="hidden" name="admin_email" value="">
+                        <input type="hidden" name="form_subject" value="Одиночные решения - Отопление">    
+
+                    	<div class="message js-form-message"></div>
+                    	<input type="text" value="" name="Телефон" placeholder="Введите Ваш номер телефона" class="greeninput" required /><br/>
+                        <!-- <a href="#" class="greena">ОСТАВИТЬ ЗАЯВКУ</a> -->
+                        <input type="submit" class="submit" value="ОСТАВИТЬ ЗАЯВКУ">
+                        <br/>
+                    </form>
+                    <h5>либо позвоните по телефону</h5>
+                    <div class="one_goriz wi200">
+                		<span class="tab">                	
+                    		<a href="tel:+78123125473" class="ts mf1">+7 (812) 312 54 73</a>
+                	    </span> <!--tab-->
+        			</div> <!--one_goriz-->
+                </div> <!--rsfb-->
+        		<div class="clear"></div>
+    </div> <!--modal-cont-->
+<a href="#" class="closemod"></a>
+</div> <!--modal-->
+
+<!-- PAGE3 Одиночные решения - Проектирования вентиляция-->
+<div class="modal wirsfb" id="mo2">
+	<div class="modal-cont nobkg">
+    	<div class="rsfb">
+                	<h3>Заказать звонок</h3>
+                    <h5>Введите Ваш номер и менеджер<br/>свяжется с Вами в течении 10 минут <br/>и ответит на все вопросы. </h5><br/><br/>
+                    <form>
+                        <input type="hidden" name="project_name" value="Проектирование инженерных систем">
+                        <input type="hidden" name="admin_email" value="">
+                        <input type="hidden" name="form_subject" value="Одиночные решения - Проектирования вентиляция">    
+
+                    	<div class="message js-form-message"></div>
+                    	<input type="text" name="Телефон" placeholder="Введите Ваш номер телефона" class="greeninput"/ required><br/>
+                        <!-- <a href="#" class="greena">ОСТАВИТЬ ЗАЯВКУ</a><br/> -->
+                        <input type="submit" class="submit" value="ОСТАВИТЬ ЗАЯВКУ">
+                        <br/>
+                    </form>
+                    <h5>либо позвоните по телефону</h5>
+                    <div class="one_goriz wi200">
+                		<span class="tab">                	
+                    		<a href="tel:+78123125473" class="ts mf1">+7 (812) 312 54 73</a>
+                	    </span> <!--tab-->
+        			</div> <!--one_goriz-->
+                </div> <!--rsfb-->
+        		<div class="clear"></div>
+    </div> <!--modal-cont-->
+<a href="#" class="closemod"></a>
+</div> <!--modal-->
+
+<!-- PAGE3 Одиночные решения - Проектирования вентиляция (СКРИТАЯ)-->
+<div class="modal" id="mo12">
+	<div class="modal-cont">
+    			<div class="lsfb nobkg dde">
+                    <span class="bigfont">Отопление</span>
+                    <ul class="sul hideon300">
+                    	<li>1) Рекомендации по утеплению;</li>
+                        <li>2) Низкотемпературные системы отопления;</li>
+                        <li>3) Управление и контроль за системами дома;</li>
+                        <li>4) Внедрение новых систем, только в согласованном режиме с существующими системами. Необходима проектная проработка каждой системы;</li>
+                        <li>5) Оборудование необходимое для работы инженерных систем, подбирается на основе- расчета системы и режимов работы конкретно для каждого дома, для обеспечения Высокой степени Комфорта и Безопасности.</li>                       
+                    </ul> <!--snowul--> 
+                </div> <!--lsfb-->
+                <div class="rsfb">
+                	<h3>Заказать звонок</h3>
+                    <h5>Введите Ваш номер и менеджер<br/>свяжется с Вами в течении 10 минут <br/>и ответит на все вопросы. </h5><br/><br/>
+                    <form>
+                        
+                        <input type="hidden" name="project_name" value="Проектирование инженерных систем">
+                        <input type="hidden" name="admin_email" value="">
+                        <input type="hidden" name="form_subject" value="Одиночные решения - Проектирования вентиляция">    
+                            
+                    	<div class="message js-form-message"></div>
+                    	<input type="text" name="Телефон" placeholder="Введите Ваш номер телефона" class="greeninput" required/><br/>
+                        <!-- <a href="#" class="greena">ОСТАВИТЬ ЗАЯВКУ</a> -->
+                        <input type="submit" class="submit" value="ОСТАВИТЬ ЗАЯВКУ">
+                        <br/>
+                    </form>
+                    <h5>либо позвоните по телефону</h5>
+                    <div class="one_goriz wi200">
+                		<span class="tab">                	
+                    		<a href="tel:+78123125473" class="ts mf1">+7 (812) 312 54 73</a>
+                	    </span> <!--tab-->
+        			</div> <!--one_goriz-->
+                </div> <!--rsfb-->
+        		<div class="clear"></div>
+    </div> <!--modal-cont-->
+<a href="#" class="closemod"></a>
+</div> <!--modal-->
+
+<!-- PAGE3 Одиночные решения - Водоснабжение и водоотведение-->
+<div class="modal wirsfb" id="mo3">
+	<div class="modal-cont nobkg">
+    	<div class="rsfb">
+                	<h3>Заказать звонок</h3>
+                    <h5>Введите Ваш номер и менеджер<br/>свяжется с Вами в течении 10 минут <br/>и ответит на все вопросы. </h5><br/><br/>
+                    <form>
+
+                        <input type="hidden" name="project_name" value="Проектирование инженерных систем">
+                        <input type="hidden" name="admin_email" value="">
+                        <input type="hidden" name="form_subject" value="Одиночные решения - Водоснабжение и водоотведение">
+
+                    	<div class="message js-form-message"></div>
+                    	<input type="text" value="" name="Телефон" placeholder="Введите Ваш номер телефона" class="greeninput" required/><br/>
+                        <input type="submit" class="submit" value="ОСТАВИТЬ ЗАЯВКУ">
+                        <!-- <a href="#" class="greena">ОСТАВИТЬ ЗАЯВКУ</a><br/> -->
+                        <br/>
+                    </form>
+                    <h5>либо позвоните по телефону</h5>
+                    <div class="one_goriz wi200">
+                		<span class="tab">                	
+                    		<a href="tel:+78123125473" class="ts mf1">+7 (812) 312 54 73</a>
+                	    </span> <!--tab-->
+        			</div> <!--one_goriz-->
+                </div> <!--rsfb-->
+        		<div class="clear"></div>
+    </div> <!--modal-cont-->
+<a href="#" class="closemod"></a>
+</div> <!--modal-->
+
+<!-- PAGE3 Одиночные решения - Водоснабжение и водоотведение (СКРИТАЯ)-->
+<div class="modal" id="mo13">
+	<div class="modal-cont">
+    			<div class="lsfb nobkg dde">
+                    <span class="bigfont">Отопление</span>
+                    <ul class="sul hideon300">
+                    	<li>1) Рекомендации по утеплению;</li>
+                        <li>2) Низкотемпературные системы отопления;</li>
+                        <li>3) Управление и контроль за системами дома;</li>
+                        <li>4) Внедрение новых систем, только в согласованном режиме с существующими системами. Необходима проектная проработка каждой системы;</li>
+                        <li>5) Оборудование необходимое для работы инженерных систем, подбирается на основе- расчета системы и режимов работы конкретно для каждого дома, для обеспечения Высокой степени Комфорта и Безопасности.</li>                       
+                    </ul> <!--snowul--> 
+                </div> <!--lsfb-->
+                <div class="rsfb">
+                	<h3>Заказать звонок</h3>
+                    <h5>Введите Ваш номер и менеджер<br/>свяжется с Вами в течении 10 минут <br/>и ответит на все вопросы. </h5><br/><br/>
+                    <form>
+
+                        <input type="hidden" name="project_name" value="Проектирование инженерных систем">
+                        <input type="hidden" name="admin_email" value="">
+                        <input type="hidden" name="form_subject" value="Одиночные решения - Водоснабжение и водоотведение">
+
+                    	<div class="message js-form-message"></div>
+                    	<input type="text" name="Телефон" placeholder="Введите Ваш номер телефона" class="greeninput" required/><br/>
+                        <!-- <a href="#" class="greena">ОСТАВИТЬ ЗАЯВКУ</a> -->
+                        <input type="submit" class="submit" value="ОСТАВИТЬ ЗАЯВКУ">
+                        <br/>
+                    </form>
+                    <h5>либо позвоните по телефону</h5>
+                    <div class="one_goriz wi200">
+                		<span class="tab">                	
+                    		<a href="tel:+78123125473" class="ts mf1">+7 (812) 312 54 73</a>
+                	    </span> <!--tab-->
+        			</div> <!--one_goriz-->
+                </div> <!--rsfb-->
+        		<div class="clear"></div>
+    </div> <!--modal-cont-->
+<a href="#" class="closemod"></a>
+</div> <!--modal-->
+
+
+<!-- PAGE3 Комбинированные пакеты - Отопление + водоснабжение и водоотведение-->
+<div class="modal wirsfb" id="mo4">
+	<div class="modal-cont nobkg">
+    	<div class="rsfb">
+                	<h3>Заказать звонок</h3>
+                    <h5>Введите Ваш номер и менеджер<br/>свяжется с Вами в течении 10 минут <br/>и ответит на все вопросы. </h5><br/><br/>
+                    <form>
+                    
+                        <input type="hidden" name="project_name" value="Проектирование инженерных систем">
+                        <input type="hidden" name="admin_email" value="">
+                        <input type="hidden" name="form_subject" value="Комбинированные пакеты - Отопление + водоснабжение и водоотведение">        
+
+                    	<div class="message js-form-message"></div>
+                    	<input type="text" value="" name="Телефон" placeholder="Введите Ваш номер телефона" class="greeninput" required/><br/>
+                        <!-- <a href="#" class="greena">ОСТАВИТЬ ЗАЯВКУ</a> -->
+                        <input type="submit" class="submit" value="ОСТАВИТЬ ЗАЯВКУ">
+                        <br/>
+                    </form>
+                    <h5>либо позвоните по телефону</h5>
+                    <div class="one_goriz wi200">
+                		<span class="tab">                	
+                    		<a href="tel:+78123125473" class="ts mf1">+7 (812) 312 54 73</a>
+                	    </span> <!--tab-->
+        			</div> <!--one_goriz-->
+                </div> <!--rsfb-->
+        		<div class="clear"></div>
+    </div> <!--modal-cont-->
+<a href="#" class="closemod"></a>
+</div> <!--modal-->
+
+<!-- PAGE3 Комбинированные пакеты - Отопление + водоснабжение и водоотведение (СКРИТАЯ)-->
+<div class="modal" id="mo14">
+	<div class="modal-cont">
+    			<div class="lsfb nobkg dde">
+                    <span class="bigfont">Отопление</span>
+                    <ul class="sul hideon300">
+                    	<li>1) Рекомендации по утеплению;</li>
+                        <li>2) Низкотемпературные системы отопления;</li>
+                        <li>3) Управление и контроль за системами дома;</li>
+                        <li>4) Внедрение новых систем, только в согласованном режиме с существующими системами. Необходима проектная проработка каждой системы;</li>
+                        <li>5) Оборудование необходимое для работы инженерных систем, подбирается на основе- расчета системы и режимов работы конкретно для каждого дома, для обеспечения Высокой степени Комфорта и Безопасности.</li>                       
+                    </ul> <!--snowul--> 
+                </div> <!--lsfb-->
+                <div class="rsfb">
+                	<h3>Заказать звонок</h3>
+                    <h5>Введите Ваш номер и менеджер<br/>свяжется с Вами в течении 10 минут <br/>и ответит на все вопросы. </h5><br/><br/>
+                    <form>
+
+                        <input type="hidden" name="project_name" value="Проектирование инженерных систем">
+                        <input type="hidden" name="admin_email" value="">
+                        <input type="hidden" name="form_subject" value="мбинированные пакеты - Отопление + водоснабжение и водоотведение">
+
+                    	<div class="message js-form-message"></div>
+                    	<input type="text" name="Телефон" placeholder="Введите Ваш номер телефона" class="greeninput" required/><br/>
+                        <!-- <a href="#" class="greena">ОСТАВИТЬ ЗАЯВКУ</a> -->
+                        <input type="submit" class="submit" value="ОСТАВИТЬ ЗАЯВКУ">
+                        <br/>
+                    </form>
+                    <h5>либо позвоните по телефону</h5>
+                    <div class="one_goriz wi200">
+                		<span class="tab">                	
+                    		<a href="tel:+78123125473" class="ts mf1">+7 (812) 312 54 73</a>
+                	    </span> <!--tab-->
+        			</div> <!--one_goriz-->
+                </div> <!--rsfb-->
+        		<div class="clear"></div>
+    </div> <!--modal-cont-->
+<a href="#" class="closemod"></a>
+</div> <!--modal-->
+
+
+<!-- PAGE3 Комбинированные пакеты - Отопление + вентиляция + водоснабжение + водоотведение -->
+<div class="modal wirsfb" id="mo5">
+	<div class="modal-cont nobkg">
+    	<div class="rsfb">
+                	<h3>Заказать звонок</h3>
+                    <h5>Введите Ваш номер и менеджер<br/>свяжется с Вами в течении 10 минут <br/>и ответит на все вопросы. </h5><br/><br/>
+                    <form>
+
+                        <input type="hidden" name="project_name" value="Проектирование инженерных систем">
+                        <input type="hidden" name="admin_email" value="">
+                        <input type="hidden" name="form_subject" value="Комбинированные пакеты - Отопление + вентиляция + водоснабжение + водоотведение">
+
+                    	<div class="message js-form-message"></div>
+                    	<input type="text" name="Телефон" placeholder="Введите Ваш номер телефона" class="greeninput" required /><br/>
+                        <!-- <a href="#" class="greena">ОСТАВИТЬ ЗАЯВКУ</a> -->
+                        <input type="submit" class="submit" value="ОСТАВИТЬ ЗАЯВКУ">
+                        <br/>
+                    </form>
+                    <h5>либо позвоните по телефону</h5>
+                    <div class="one_goriz wi200">
+                		<span class="tab">                	
+                    		<a href="tel:+78123125473" class="ts mf1">+7 (812) 312 54 73</a>
+                	    </span> <!--tab-->
+        			</div> <!--one_goriz-->
+                </div> <!--rsfb-->
+        		<div class="clear"></div>
+    </div> <!--modal-cont-->
+<a href="#" class="closemod"></a>
+</div> <!--modal-->
+
+
+<!-- PAGE3 Комбинированные пакеты - Отопление + вентиляция + водоснабжение + водоотведение (СКРИТАЯ)-->
+<div class="modal" id="mo15">
+	<div class="modal-cont">
+    			<div class="lsfb nobkg dde">
+                    <span class="bigfont">Отопление</span>
+                    <ul class="sul hideon300">
+                    	<li>1) Рекомендации по утеплению;</li>
+                        <li>2) Низкотемпературные системы отопления;</li>
+                        <li>3) Управление и контроль за системами дома;</li>
+                        <li>4) Внедрение новых систем, только в согласованном режиме с существующими системами. Необходима проектная проработка каждой системы;</li>
+                        <li>5) Оборудование необходимое для работы инженерных систем, подбирается на основе- расчета системы и режимов работы конкретно для каждого дома, для обеспечения Высокой степени Комфорта и Безопасности.</li>                       
+                    </ul> <!--snowul--> 
+                </div> <!--lsfb-->
+                <div class="rsfb">
+                	<h3>Заказать звонок</h3>
+                    <h5>Введите Ваш номер и менеджер<br/>свяжется с Вами в течении 10 минут <br/>и ответит на все вопросы. </h5><br/><br/>
+                    <form>
+
+                        <input type="hidden" name="project_name" value="Проектирование инженерных систем">
+                        <input type="hidden" name="admin_email" value="">
+                        <input type="hidden" name="form_subject" value="Комбинированные пакеты - Отопление + вентиляция + водоснабжение + водоотведение">
+
+                    	<div class="message js-form-message"></div>
+                    	<input type="text" name="Телефон" placeholder="Введите Ваш номер телефона" class="greeninput" required /><br/>
+                        <!-- <a href="#" class="greena">ОСТАВИТЬ ЗАЯВКУ</a> -->
+                        <input type="submit" class="submit" value="ОСТАВИТЬ ЗАЯВКУ">
+                        <br/>
+                    </form>
+                    <h5>либо позвоните по телефону</h5>
+                    <div class="one_goriz wi200">
+                		<span class="tab">                	
+                    		<a href="tel:+78123125473" class="ts mf1">+7 (812) 312 54 73</a>
+                	    </span> <!--tab-->
+        			</div> <!--one_goriz-->
+                </div> <!--rsfb-->
+        		<div class="clear"></div>
+    </div> <!--modal-cont-->
+<a href="#" class="closemod"></a>
+</div> <!--modal-->
+
+<!-- PAGE3 Индивидуальное проектирование любой сложности-->
+<div class="modal  wirsfb" id="mo6">
+	<div class="modal-cont nobkg">
+    	<div class="rsfb">
+                	<h3>Заказать звонок</h3>
+                    <h5>Введите Ваш номер и менеджер<br/>свяжется с Вами в течении 10 минут <br/>и ответит на все вопросы. </h5><br/><br/>
+                    <form>
+    
+                        <input type="hidden" name="project_name" value="Проектирование инженерных систем">
+                        <input type="hidden" name="admin_email" value="">
+                        <input type="hidden" name="form_subject" value="Индивидуальное проектирование любой сложности">
+
+                    	<div class="message js-form-message"></div>
+                    	<input type="text" name="Телефон" placeholder="Введите Ваш номер телефона" class="greeninput" required/><br/>
+                        <!-- <a href="#" class="greena">ОСТАВИТЬ ЗАЯВКУ</a> -->
+                         <input type="submit" class="submit" value="ОСТАВИТЬ ЗАЯВКУ">
+                        <br/>
+                    </form>
+                    <h5>либо позвоните по телефону</h5>
+                    <div class="one_goriz wi200">
+                		<span class="tab">                	
+                    		<a href="tel:+78123125473" class="ts mf1">+7 (812) 312 54 73</a>
+                	    </span> <!--tab-->
+        			</div> <!--one_goriz-->
+                </div> <!--rsfb-->
+        		<div class="clear"></div>
+    </div> <!--modal-cont-->
+<a href="#" class="closemod"></a>
+</div> <!--modal-->
+
+<div class="modal" id="mo16">
+	<div class="modal-cont">
+    			<div class="lsfb nobkg dde">
+                    <span class="bigfont">Отопление16</span>
+                    <ul class="sul hideon300">
+                    	<li>1) Рекомендации по утеплению;</li>
+                        <li>2) Низкотемпературные системы отопления;</li>
+                        <li>3) Управление и контроль за системами дома;</li>
+                        <li>4) Внедрение новых систем, только в согласованном режиме с существующими системами. Необходима проектная проработка каждой системы;</li>
+                        <li>5) Оборудование необходимое для работы инженерных систем, подбирается на основе- расчета системы и режимов работы конкретно для каждого дома, для обеспечения Высокой степени Комфорта и Безопасности.</li>                       
+                    </ul> <!--snowul--> 
+                </div> <!--lsfb-->
+                <div class="rsfb">
+                	<h3>Отопление17</h3>
+                    <h5>Введите Ваш номер и менеджер<br/>свяжется с Вами в течении 10 минут <br/>и ответит на все вопросы. </h5><br/><br/>
+                    <form class="info" action="" method="post">
+                    	<div class="message js-form-message"></div>
+                    	<input type="text" value="" name="tele" placeholder="Введите Ваш номер телефона" class="greeninput"/><br/>
+                        <a href="#" class="greena">ОСТАВИТЬ ЗАЯВКУ</a><br/>
+                    </form>
+                    <h5>либо позвоните по телефону</h5>
+                    <div class="one_goriz wi200">
+                		<span class="tab">                	
+                    		<a href="tel:+78123125473" class="ts mf1">+7 (812) 312 54 73</a>
+                	    </span> <!--tab-->
+        			</div> <!--one_goriz-->
+                </div> <!--rsfb-->
+        		<div class="clear"></div>
+    </div> <!--modal-cont-->
+<a href="#" class="closemod"></a>
+</div> <!--modal-->
+
+<!-- PAGE3 Тепловой расчет (СКРИТАЯ)-->
+<div class="modal" id="mo17">
+	<div class="modal-cont">
+    			<div class="lsfb nobkg dde">
+                    <span class="bigfont">Отопление</span>
+                    <ul class="sul hideon300">
+                    	<li>1) Рекомендации по утеплению;</li>
+                        <li>2) Низкотемпературные системы отопления;</li>
+                        <li>3) Управление и контроль за системами дома;</li>
+                        <li>4) Внедрение новых систем, только в согласованном режиме с существующими системами. Необходима проектная проработка каждой системы;</li>
+                        <li>5) Оборудование необходимое для работы инженерных систем, подбирается на основе- расчета системы и режимов работы конкретно для каждого дома, для обеспечения Высокой степени Комфорта и Безопасности.</li>                       
+                    </ul> <!--snowul--> 
+                </div> <!--lsfb-->
+                <div class="rsfb">
+                	<h3>Заказать звонок</h3>
+                    <h5>Введите Ваш номер и менеджер<br/>свяжется с Вами в течении 10 минут <br/>и ответит на все вопросы. </h5><br/><br/>
+                    <form>
+
+                        <input type="hidden" name="project_name" value="Проектирование инженерных систем">
+                        <input type="hidden" name="admin_email" value="">
+                        <input type="hidden" name="form_subject" value="Тепловой расчет">
+
+                    	<div class="message js-form-message"></div>
+                    	<input type="text" name="Телефон" placeholder="Введите Ваш номер телефона" class="greeninput" required/><br/>
+                        <!-- <a href="#" class="greena">ОСТАВИТЬ ЗАЯВКУ</a> -->
+                        <input type="submit" class="submit" value="ОСТАВИТЬ ЗАЯВКУ">
+                        <br/>
+                    </form>
+                    <h5>либо позвоните по телефону</h5>
+                    <div class="one_goriz wi200">
+                		<span class="tab">                	
+                    		<a href="tel:+78123125473" class="ts mf1">+7 (812) 312 54 73</a>
+                	    </span> <!--tab-->
+        			</div> <!--one_goriz-->
+                </div> <!--rsfb-->
+        		<div class="clear"></div>
+    </div> <!--modal-cont-->
+<a href="#" class="closemod"></a>
+</div> <!--modal-->
+
+<!-- PAGE3 Тепловой расчет-->
+<div class="modal wirsfb" id="mo7">
+	<div class="modal-cont nobkg">
+    	<div class="rsfb">
+                	<h3>Заказать звонок</h3>
+                    <h5>Введите Ваш номер и менеджер<br/>свяжется с Вами в течении 10 минут <br/>и ответит на все вопросы. </h5><br/><br/>
+                    <form>
+
+                        <input type="hidden" name="project_name" value="Проектирование инженерных систем">
+                        <input type="hidden" name="admin_email" value="">
+                        <input type="hidden" name="form_subject" value="Тепловой расчет">
+
+                    	<div class="message js-form-message"></div>
+                    	<input type="text" name="Телефон" placeholder="Введите Ваш номер телефона" class="greeninput" required/><br/>
+                        <!-- <a href="#" class="greena">ОСТАВИТЬ ЗАЯВКУ</a> -->
+                        <input type="submit" class="submit" value="ОСТАВИТЬ ЗАЯВКУ">
+                        <br/>
+                    </form>
+                    <h5>либо позвоните по телефону</h5>
+                    <div class="one_goriz wi200">
+                		<span class="tab">                	
+                    		<a href="tel:+78123125473" class="ts mf1">+7 (812) 312 54 73</a>
+                	    </span> <!--tab-->
+        			</div> <!--one_goriz-->
+                </div> <!--rsfb-->
+        		<div class="clear"></div>
+    </div> <!--modal-cont-->
+<a href="#" class="closemod"></a>
+</div> <!--modal-->
+
+
+<!-- PAGE3 Пакет энергоэффективности (СКРИТАЯ)-->
+<div class="modal" id="mo18">
+	<div class="modal-cont">
+    			<div class="lsfb nobkg dde">
+                    <span class="bigfont">Отопление</span>
+                    <ul class="sul hideon300">
+                    	<li>1) Рекомендации по утеплению;</li>
+                        <li>2) Низкотемпературные системы отопления;</li>
+                        <li>3) Управление и контроль за системами дома;</li>
+                        <li>4) Внедрение новых систем, только в согласованном режиме с существующими системами. Необходима проектная проработка каждой системы;</li>
+                        <li>5) Оборудование необходимое для работы инженерных систем, подбирается на основе- расчета системы и режимов работы конкретно для каждого дома, для обеспечения Высокой степени Комфорта и Безопасности.</li>                       
+                    </ul> <!--snowul--> 
+                </div> <!--lsfb-->
+                <div class="rsfb">
+                	<h3>Заказать звонок</h3>
+                    <h5>Введите Ваш номер и менеджер<br/>свяжется с Вами в течении 10 минут <br/>и ответит на все вопросы. </h5><br/><br/>
+                    <form>
+
+                        <input type="hidden" name="project_name" value="Проектирование инженерных систем">
+                        <input type="hidden" name="admin_email" value="">
+                        <input type="hidden" name="form_subject" value="Пакет энергоэффективности">
+
+                    	<div class="message js-form-message"></div>
+                    	<input type="text" name="Телефон" placeholder="Введите Ваш номер телефона" class="greeninput" required/><br/>
+                        <!-- <a href="#" class="greena">ОСТАВИТЬ ЗАЯВКУ</a> -->
+                        <input type="submit" class="submit" value="ОСТАВИТЬ ЗАЯВКУ">
+                        <br/>
+                    </form>
+                    <h5>либо позвоните по телефону</h5>
+                    <div class="one_goriz wi200">
+                		<span class="tab">                	
+                    		<a href="tel:+78123125473" class="ts mf1">+7 (812) 312 54 73</a>
+                	    </span> <!--tab-->
+        			</div> <!--one_goriz-->
+                </div> <!--rsfb-->
+        		<div class="clear"></div>
+    </div> <!--modal-cont-->
+<a href="#" class="closemod"></a>
+</div> <!--modal-->
+
+
+<!-- PAGE3 Пакет энергоэффективности-->
+<div class="modal wirsfb" id="mo8">
+	<div class="modal-cont nobkg">
+    	<div class="rsfb">
+                	<h3>Заказать звонок</h3>
+                    <h5>Введите Ваш номер и менеджер<br/>свяжется с Вами в течении 10 минут <br/>и ответит на все вопросы. </h5><br/><br/>
+                    <form>
+    
+                        <input type="hidden" name="project_name" value="Проектирование инженерных систем">
+                        <input type="hidden" name="admin_email" value="">
+                        <input type="hidden" name="form_subject" value="Пакет энергоэффективности">
+
+                    	<div class="message js-form-message"></div>
+                    	<input type="text" name="Телефон" placeholder="Введите Ваш номер телефона" class="greeninput" required/><br/>
+                        <!-- <a href="#" class="greena">ОСТАВИТЬ ЗАЯВКУ</a> -->
+                        <input type="submit" class="submit" value="ОСТАВИТЬ ЗАЯВКУ">
+                        <br/>
+                    </form>
+                    <h5>либо позвоните по телефону</h5>
+                    <div class="one_goriz wi200">
+                		<span class="tab">                	
+                    		<a href="tel:+78123125473" class="ts mf1">+7 (812) 312 54 73</a>
+                	    </span> <!--tab-->
+        			</div> <!--one_goriz-->
+                </div> <!--rsfb-->
+        		<div class="clear"></div>
+    </div> <!--modal-cont-->
+<a href="#" class="closemod"></a>
+</div> <!--modal-->
+
+<!-- FIRST PAGE - TOP MENU BUTTON -->
+<div class="modal wirsfb" id="obrz">
+	<div class="modal-cont nobkg">
+    	<div class="rsfb">
+                	<h3>Заказать звонок</h3>
+                    <h5>Введите Ваш номер и менеджер<br/>свяжется с Вами в течении 10 минут <br/>и ответит на все вопросы. </h5><br/><br/>
+                    <form>
+
+                        <input type="hidden" name="project_name" value="Проектирование инженерных систем">
+                        <input type="hidden" name="admin_email" value="">
+                        <input type="hidden" name="form_subject" value="Заказать звонок - меню сайта ">
+
+                    	<div class="message js-form-message"></div>
+                    	<input type="text" value="" name="Телефон" placeholder="Введите Ваш номер телефона" class="greeninput" required/><br/>
+                        <!-- <a href="#" class="greena">ОСТАВИТЬ ЗАЯВКУ</a> -->
+                        <input type="submit" class="submit" value="ОСТАВИТЬ ЗАЯВКУ">
+                        <br/>
+                    </form>
+                    <h5>либо позвоните по телефону</h5>
+                    <div class="one_goriz wi200">
+                		<span class="tab">                	
+                    		<a href="tel:+78123125473" class="ts mf1">+7 (812) 312 54 73</a>
+                	    </span> <!--tab-->
+        			</div> <!--one_goriz-->
+                </div> <!--rsfb-->
+        		<div class="clear"></div>
+    </div> <!--modal-cont-->
+<a href="#" class="closemod"></a>
+</div> <!--modal-->
+
+<div class="question hidden" id="question">
+        <div class="modal-cont nobkg">
+        <div class="rsfb_que">
+                <a class="close_que" id="close_que"><img src="img/close.png" alt=""></a>
+                    <h3>Задайте Ваш вопрос</h3>
+                    <h5>Менеджер ответит на Ваш вопрос<br/>в течении 10 минут</h5><br/>
+                    <form>
+
+                        <input type="hidden" name="project_name" value="Проектирование инженерных систем">
+                        <input type="hidden" name="admin_email" value="">
+                        <input type="hidden" name="form_subject" value="Заказать вопрос - кнопка справа">
+
+                        <div class="message js-form-message"></div>
+                        <input type="email" value="" name="E-mail" placeholder="Введите Ваш e-mail адрес" class="greeninput" required/><br/>
+                        <textarea class="textarea_que" name="question" placeholder="Введите интересующий Вас вопрос ..."></textarea>
+                        <!-- <a href="#" class="greena">ОСТАВИТЬ ЗАЯВКУ</a> -->
+                        <input type="submit" class="submit submit_que" value="ОСТАВИТЬ ЗАЯВКУ">
+                        <br/>
+                    </form>
+                    <h5>либо позвоните по телефону</h5>
+                    <div class="one_goriz wi200">
+                        <span class="tab">                  
+                            <a href="tel:+78123125473" class="ts mf1">+7 (812) 312 54 73</a>
+                        </span>
+                        <br>
+                        <br> <!--tab-->
+                    </div> <!--one_goriz-->
+                </div> <!--rsfb-->
+                <div class="clear"></div>
+    </div> <!--modal-cont-->
+    
+</div>
+
+<div class="popup_success hidden">
+    <div class="message_popup">
+        <p class="p_popup">Спасибо за ваше сообщение!<br>Наши менеджеры свяжуться с вами <br>в ближайшее время.</p>
+        <a href="#" class="closemod" id="close_shit"></a>
+    </div>
+</div>
+
+
+</body>
+</html>
+
